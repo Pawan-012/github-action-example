@@ -59,7 +59,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
-		<finalName>integration-01</finalName>
+		<finalName>springboot-images-new</finalName>
 	</build>
 
 </project>
