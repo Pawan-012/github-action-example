@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
 	@GetMapping("/get")
 	public String meth01() {
-		return "hello kya chutiya giri hai ye";
+		return "The first CI CD deployment pipeline";
 	}
 
 }
