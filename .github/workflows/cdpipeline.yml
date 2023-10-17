@@ -1,0 +1,21 @@
+name: project cd flow
+
+on:
+  workflow_run:
+    workflows: ["project ci cd flow"]
+    types:
+      - completed
+
+jobs:
+  build:
+
+    runs-on: self-hosted 
+
+    steps:
+    - name: pull the docker image from dockerhub
+      run: sudo docker pull patpawa3/springboot-images-new
+    - name: delete the old docker container
+      run: sudo docker rm -f cicd-pipeline-container || true
+    - name: run docker container 
+      run: sudo docker run -d -p 7070:7070 --name cicd-pipeline-container patpawa3/springboot-images-new
+ 
