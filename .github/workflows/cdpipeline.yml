@@ -18,4 +18,6 @@ jobs:
       run: sudo docker rm -f cicd-pipeline-container || true
     - name: run docker container 
       run: sudo docker run -d -p 7070:7070 --name cicd-pipeline-container patpawa3/springboot-images-new
+    - name: remove previous container
+      run: sudo docker image prune -f
  
