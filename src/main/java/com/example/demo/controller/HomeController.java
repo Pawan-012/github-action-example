@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class HomeController {
 	@GetMapping("/get")
 	public String meth01() {
-		return "Welcome to algo trading software";
+		return "!!!Welcome to algo trading software!!!";
 	}
 
 }
